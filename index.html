@@ -1,0 +1,1941 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102d29">
+
+<title>Ranchdell School | Growing Bright Futures</title>
+<meta name="description" content="Welcome to Ranchdell School. Discover our learning programmes, school community, admissions and fees.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  /* Ranchdell Academy brand colours */
+  --green: #18345B;
+  --green-light: #397A43;
+  --gold: #E9782B;
+
+  /* Neutral colours */
+  --cream: #F7F8F5;
+  --white: #FFFFFF;
+  --dark: #202B38;
+  --muted: #6B7480;
+  --border: #E5E9E5;
+
+  /* Shadows */
+  --shadow: 0 15px 45px rgba(24, 52, 91, .09);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-label {
+  color: var(--green-light);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 13px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--green);
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 17px;
+}
+
+.section-description {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+/* ANNOUNCEMENT */
+
+.announcement {
+  background: var(--green);
+  color: white;
+  padding: 9px 15px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: .4px;
+}
+
+.announcement span {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  min-height: 79px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  background: var(--green);
+  color: var(--gold);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.brand-name {
+  color: var(--green);
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.brand-name small {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #526057;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color .25s;
+}
+
+.nav-links a:hover {
+  color: var(--green-light);
+}
+
+.nav-links .nav-cta {
+  background: var(--green);
+  color: white;
+  padding: 12px 19px;
+  border-radius: 6px;
+}
+
+.nav-links .nav-cta:hover {
+  background: var(--green-light);
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: var(--green);
+  color: white;
+  border-radius: 7px;
+  width: 43px;
+  height: 43px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg,rgba(9,35,28,.94),rgba(9,35,28,.75),rgba(9,35,28,.3)),
+    url("hero.jpg")
+    center/cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border: 1px solid rgba(214,173,88,.24);
+  border-radius: 50%;
+  right: -160px;
+  bottom: -240px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 100px 0;
+  animation: slideUp .9s ease both;
+}
+
+.hero-tag {
+  display: inline-block;
+  color: var(--gold);
+  border: 1px solid rgba(214,173,88,.5);
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: clamp(45px,7vw,76px);
+  line-height: 1.12;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  max-width: 570px;
+  color: #e0e9e3;
+  font-size: 16px;
+  margin-bottom: 33px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 23px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #1c2d23;
+}
+
+.btn-gold:hover {
+  background: #e5c47d;
+  box-shadow: 0 10px 25px rgba(214,173,88,.2);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.6);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--green);
+}
+
+/* INTRODUCTION */
+
+.intro {
+  background: white;
+  padding: 75px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-image {
+  position: relative;
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s;
+}
+
+.intro-image:hover img {
+  transform: scale(1.06);
+}
+
+.intro-badge {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background: var(--gold);
+  color: var(--green);
+  padding: 15px 20px;
+  border-radius: 7px;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.intro-text p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 17px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--green-light);
+  font-weight: 800;
+  font-size: 13px;
+  border-bottom: 2px solid var(--gold);
+}
+
+/* VALUES */
+
+.values-section {
+  background: var(--cream);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+  margin-top: 43px;
+}
+
+.value-card {
+  background: white;
+  padding: 29px 22px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: .35s;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+  border-color: var(--gold);
+}
+
+.value-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #edf5ef;
+  color: var(--green-light);
+  font-size: 22px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.value-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--green);
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.value-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ACADEMICS */
+
+.academics {
+  background: white;
+}
+
+.grade-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+  margin-top: 42px;
+}
+
+.grade-card {
+  width: 200px;
+  border-radius: 11px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: white;
+  transition: .35s;
+}
+
+.grade-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow);
+}
+
+.grade-image {
+  width: 200px;
+  height: 190px;
+  overflow: hidden;
+  background: #e5eee7;
+}
+
+.grade-image img {
+  width: 200px;
+  height: 190px;
+  transition: transform .6s;
+}
+
+.grade-card:hover .grade-image img {
+  transform: scale(1.06);
+}
+
+.grade-content {
+  padding: 12px;
+}
+
+.grade-content h3 {
+  color: var(--green);
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin-bottom: 9px;
+}
+
+.grade-content p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* FEES */
+
+.fees-section {
+  background: #f1f4ed;
+}
+
+.fees-layout {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 45px;
+  align-items: start;
+  margin-top: 42px;
+}
+
+.fees-note {
+  background: var(--green);
+  padding: 33px;
+  border-radius: 12px;
+  color: white;
+}
+
+.fees-note h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.fees-note p {
+  color: #d2e1d8;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.fees-note .btn {
+  margin-top: 5px;
+}
+
+.fee-table-wrap {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(20,50,40,.05);
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.fee-table th {
+  background: var(--green);
+  color: white;
+  padding: 17px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.fee-table td {
+  padding: 17px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: #526057;
+}
+
+.fee-table td:last-child {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.fee-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.fee-footnote {
+  padding: 15px 17px;
+  font-size: 11px;
+  color: var(--muted);
+  background: #fafbf8;
+}
+
+/* UNIFORM */
+
+.uniform-section {
+  background: white;
+}
+
+.uniform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+
+.uniform-image {
+    height: 320px;
+    background: #F2F5F0;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.uniform-image img {
+   
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+}
+
+.uniform-placeholder {
+    display: none;
+}
+
+
+.uniform-placeholder {
+  color: var(--muted);
+}
+
+.uniform-placeholder span {
+  display: block;
+  font-size: 43px;
+  margin-bottom: 10px;
+}
+
+.uniform-placeholder strong {
+  color: var(--green);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.uniform-info h3 {
+  color: var(--green);
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin-bottom: 13px;
+}
+
+.uniform-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.uniform-list {
+  list-style: none;
+}
+
+.uniform-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: #536157;
+  font-size: 13px;
+}
+
+.uniform-list li::before {
+  content: "✓";
+  color: var(--green-light);
+  font-weight: 800;
+  margin-right: 10px;
+}
+
+/* SCHOOL HOURS */
+
+.hours-section {
+  background: var(--green);
+  color: white;
+}
+
+.hours-section .section-title {
+  color: white;
+}
+
+.hours-section .section-description {
+  color: #d1e0d8;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.hour-card {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.13);
+  padding: 27px;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.hour-card:hover {
+  background: rgba(255,255,255,.14);
+  transform: translateY(-5px);
+}
+
+.hour-card span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hour-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin-top: 12px;
+}
+
+.hour-card p {
+  color: #d1e0d8;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* GALLERY */
+
+.gallery-section {
+  background: var(--cream);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-rows: 190px 190px;
+  gap: 13px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 9px;
+  background: #dfe9df;
+  position: relative;
+}
+
+.gallery-item:first-child {
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 14px 13px;
+  background: linear-gradient(transparent,rgba(0,0,0,.7));
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ADMISSIONS */
+
+.admissions {
+  background: white;
+}
+
+.admissions-box {
+  background:
+    linear-gradient(110deg,rgba(13,53,42,.96),rgba(13,53,42,.83)),
+    url("about4.jpg")
+    center/cover;
+  border-radius: 14px;
+  padding: 65px 35px;
+  text-align: center;
+  color: white;
+}
+
+.admissions-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px,5vw,44px);
+  margin-bottom: 13px;
+}
+
+.admissions-box p {
+  color: #d8e6dd;
+  max-width: 580px;
+  margin: 0 auto 25px;
+  font-size: 14px;
+}
+
+/* LOCATION & CONTACT */
+
+.contact-section {
+  background: var(--cream);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.contact-details {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-item {
+  background: white;
+  padding: 21px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 9px;
+  background: #edf5ef;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  color: var(--green);
+  display: block;
+  font-size: 13px;
+}
+
+.contact-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.map-placeholder {
+  min-height: 310px;
+  border: 2px dashed #c4d1c4;
+  background: #edf2e9;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 25px;
+  color: var(--muted);
+}
+
+.map-placeholder strong {
+  display: block;
+  color: var(--green);
+  margin: 8px 0;
+}
+
+/* FOOTER */
+
+footer {
+  background: #0c2822;
+  color: white;
+  padding: 48px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 35px;
+}
+
+footer h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+footer h4 {
+  color: var(--gold);
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+footer p,
+footer a {
+  color: #c1d1c8;
+  font-size: 12px;
+}
+
+.footer-links {
+  display: grid;
+  gap: 9px;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  padding-top: 19px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 11px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 900;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #20bd70;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  box-shadow: 0 7px 25px rgba(0,0,0,.22);
+  transition: .3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* SCROLL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .grade-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .fees-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width: 700px) {
+  .section {
+    padding: 75px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 79px;
+    width: 100%;
+    background: white;
+    padding: 12px 5% 22px;
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .nav-links .nav-cta {
+    text-align: center;
+    margin-top: 7px;
+  }
+
+  .hero {
+    min-height: 590px;
+  }
+
+  .hero-content {
+    padding: 80px 0;
+  }
+
+  .intro-grid,
+  .uniform-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .intro-image {
+    height: 290px;
+  }
+
+  .grade-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 150px 150px;
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .admissions-box {
+    padding: 50px 20px;
+  }
+}
+
+@media(max-width: 480px) {
+  .container {
+    width: 91%;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fee-table th,
+  .fee-table td {
+    padding: 12px 9px;
+    font-size: 11px;
+  }
+
+  .uniform-image {
+    height: 300px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whatsapp {
+    right: 16px;
+    bottom: 17px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   RANCHDELL ACADEMY — BRAND COLOUR REFINEMENT
+========================================= */
+
+/* Announcement bar */
+.announcement {
+  background: #142B4B;
+}
+
+.announcement span {
+  color: #F18A43;
+}
+
+/* Navigation */
+.navbar {
+  background: rgba(255, 255, 255, .97);
+}
+
+.brand-mark {
+  background: #18345B;
+  color: #FFFFFF;
+}
+
+.nav-links .nav-cta,
+.menu-toggle {
+  background: #18345B;
+}
+
+.nav-links .nav-cta:hover,
+.menu-toggle:hover {
+  background: #397A43;
+}
+
+/* Hero section */
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 37, 67, .94),
+      rgba(16, 37, 67, .78),
+      rgba(16, 37, 67, .35)
+    ),
+    url("hero.jpg") center/cover;
+}
+
+.hero-tag {
+  color: #FFA05F;
+  border-color: rgba(241, 138, 67, .55);
+}
+
+.gold-text {
+  color: #F18A43;
+}
+
+.btn-gold {
+  background: #E9782B;
+  color: #FFFFFF;
+}
+
+.btn-gold:hover {
+  background: #D96820;
+  box-shadow: 0 10px 25px rgba(233, 120, 43, .2);
+}
+
+.btn-outline:hover {
+  color: #18345B;
+}
+
+/* Introduction */
+.intro-badge {
+  background: #397A43;
+  color: #FFFFFF;
+}
+
+/* Values */
+.value-icon,
+.contact-icon {
+  background: #EEF3EC;
+  color: #397A43;
+}
+
+.value-card:hover {
+  border-color: #E9782B;
+}
+
+/* Academic cards */
+.grade-image {
+  background: #EEF3EC;
+}
+
+/* Fees */
+.fees-section {
+  background: #F1F4F0;
+}
+
+.fees-note {
+  background: #18345B;
+}
+
+.fee-table th {
+  background: #18345B;
+}
+
+.fee-table td:last-child {
+  color: #397A43;
+}
+
+/* Uniform */
+.uniform-image {
+  background: #F2F5F0;
+  border-color: #C8D5C5;
+}
+
+.uniform-placeholder strong {
+  color: #18345B;
+}
+
+.uniform-list li::before {
+  color: #397A43;
+}
+
+/* School hours */
+.hours-section {
+  background: #18345B;
+}
+
+.hours-section .section-label,
+.hour-card span {
+  color: #F18A43;
+}
+
+.hour-card {
+  background: rgba(255, 255, 255, .07);
+  border-color: rgba(255, 255, 255, .14);
+}
+
+/* Gallery */
+.gallery-section {
+  background: #F7F8F5;
+}
+
+.gallery-item {
+  background: #E9EEE8;
+}
+
+/* Admissions */
+.admissions-box {
+  background:
+    linear-gradient(
+      110deg,
+      rgba(24, 52, 91, .96),
+      rgba(24, 52, 91, .82)
+    ),
+    url("about4.jpg") center/cover;
+}
+
+/* Contact */
+.contact-section {
+  background: #F7F8F5;
+}
+
+.map-placeholder {
+  background: #EEF3EC;
+  border-color: #C8D5C5;
+}
+
+.contact-item {
+  border-color: #E5E9E5;
+}
+
+/* Footer */
+footer {
+  background: #102541;
+}
+
+footer h4 {
+  color: #F18A43;
+}
+
+.footer-links a:hover {
+  color: #F18A43;
+}
+
+/* General hover and focus refinements */
+.text-link {
+  color: #397A43;
+  border-color: #E9782B;
+}
+
+a,
+button {
+  transition: all .25s ease;
+}
+
+::selection {
+  background: #397A43;
+  color: #FFFFFF;
+}
+
+
+.map-container {
+    width: 100%;
+    min-height: 310px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #EEF3EC;
+    box-shadow: 0 10px 30px rgba(24, 52, 91, .08);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 310px;
+    border: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+  Welcome to Ranchdell School — <span>Where Every Child Matters</span>
+</div>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a href="#home" class="brand">
+      <img src="logo.jpg" class="brand-mark">
+      <div class="brand-name">
+        RANCHDALE<br>ACADEMY
+        <small>FLUENCY & EXCELLENCE</small>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#fees">School Fees</a></li>
+        <li><a href="#uniform">Uniform</a></li>
+        <li><a href="tel:+260973374422" class="nav-cta">Contact Us ↗</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-tag">WELCOME TO RANCHDALE ACADEMY</div>
+
+      <h1>
+    <br>WERE FLUENCY <span class="gold-text"> MEETS EXCELLENCE</span>
+    
+      </h1>
+
+      <p>
+        Education is more than learning facts. It is about discovering
+        potential, building character and preparing young minds for
+        a world of opportunities. Welcome to Ranchdale.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#academics" class="btn btn-gold">Discover Our School ↗</a>
+        <a href="https://wa.me/+260972235211" class="btn btn-outline">Enquire About Admission</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="intro" id="about">
+  <div class="container intro-grid">
+
+    <div class="intro-image reveal">
+      <img src="book.jpg"
+        alt="Children learning together">
+      <div class="intro-badge">Learning with purpose</div>
+    </div>
+
+    <div class="intro-text reveal">
+      <div class="section-label">Discover Ranchdell</div>
+
+      <h2 class="section-title">
+        A place where potential becomes possibility.
+      </h2>
+
+      <p>
+        At Ranchdale School, we believe every learner has something
+        special to contribute. Our educational approach is designed
+        to encourage curiosity, confidence and a love of learning.
+      </p>
+
+      <p>
+        We aim to create an environment where pupils are supported
+        academically, socially and personally as they prepare for
+        the opportunities ahead.
+      </p>
+
+      <a href="#academics" class="text-link">Explore our learning programmes →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section values-section">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Our philosophy</div>
+      <h2 class="section-title">The values behind our learning.</h2>
+      <p class="section-description">
+        A strong educational foundation combines academic development
+        with character, responsibility and respect.
+      </p>
+    </div>
+
+    <div class="values-grid">
+
+      <article class="value-card reveal">
+        <div class="value-icon">✦</div>
+        <h3>Excellence</h3>
+        <p>Encouraging learners to work towards their full potential.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">◎</div>
+        <h3>Integrity</h3>
+        <p>Building honesty, responsibility and respect in everyday life.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">◇</div>
+        <h3>Creativity</h3>
+        <p>Inspiring learners to think critically and explore new ideas.</p>
+      </article>
+
+      <article class="value-card reveal">
+        <div class="value-icon">♧</div>
+        <h3>Growth</h3>
+        <p>Supporting continuous learning and personal development.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section class="section academics" id="academics">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Academic programmes</div>
+      <h2 class="section-title">A foundation for every stage.</h2>
+      <p class="section-description">
+        Our demo programme structure shows how different learning
+        stages can be presented to parents.
+      </p>
+    </div>
+
+    <div class="grade-grid">
+
+      <article class="grade-card reveal">
+        <div class="grade-image">
+          <img src="about5.jpg"
+            alt="Early childhood learners">
+        </div>
+        <div class="grade-content">
+          <h3>Early Childhood</h3>
+          <p>
+            A nurturing introduction to learning through discovery,
+            play, communication and interaction.
+          </p>
+        </div>
+      </article>
+
+      <article class="grade-card reveal">
+        <div class="grade-image">
+          <img src="about6.jpg"
+            alt="Primary classroom">
+        </div>
+        <div class="grade-content">
+          <h3>Primary Education</h3>
+          <p>
+            Building essential literacy, numeracy, knowledge and
+            problem-solving skills.
+          </p>
+        </div>
+      </article>
+
+ <article class="grade-card reveal">
+        <div class="grade-image">
+          <img src="chackpot.jpg"
+            alt="school headteacher">
+        </div>
+        <div class="grade-content">
+          <h3>Headteacher</h3>
+          <p>
+            OUR prestiged Headteacher.
+          </p>
+        </div>
+      </article>
+    
+
+    </div>
+
+    <p style="color:#78847b;font-size:11px;margin-top:20px">
+      Demonstration programme categories. Actual grades offered are to be confirmed.
+    </p>
+
+  </div>
+</section>
+
+<!-- SCHOOL FEES -->
+<section class="section fees-section" id="fees">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Admissions & fees</div>
+      <h2 class="section-title">k3000.00 per term</h2>
+      <p class="section-description">
+        Clear fee information helps parents plan confidently.
+        The table below is a demonstration layout awaiting Ranchdale's
+        official fee schedule.
+      </p>
+    </div>
+
+    <div class="fees-layout">
+
+      <div class="fees-note reveal">
+        <h3>Planning your child's education?</h3>
+
+        <p>
+          Contact the school to enquire about tuition, registration,
+          admission requirements, payment arrangements and available places.
+        </p>
+
+        <p>
+          <strong>Academic year:</strong> To be confirmed
+        </p>
+
+      <div class="fee-table-wrap reveal">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th>Programme</th>
+              <th>Termly Fees</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Early Childhood</td>
+              <td>K3000</td>
+            </tr>
+            <tr>
+              <td>Nursery / Reception</td>
+              <td>K2500</td>
+            </tr>
+            <tr>
+              <td>Primary Grades</td>
+              <td>K2500</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- UNIFORM -->
+<section class="section uniform-section" id="uniform">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">School identity</div>
+      <h2 class="section-title">Our school uniform.</h2>
+      <p class="section-description">
+        A dedicated space to showcase Ranchdell's official uniform
+        and help parents understand the dress requirements.
+      </p>
+    </div>
+
+    <div class="uniform-grid">
+
+      <div class="uniform-image reveal" id="uniformImage">
+        <div class="uniform-placeholder" id="uniformPlaceholder">
+          
+          <strong>Ranchdale Uniform Display</strong>
+                  </div>
+        <img src="uniform3.jpg" alt="Ranchdell school uniform">
+      </div>
+
+      <div class="uniform-info reveal">
+        <h3>Representing our school with pride.</h3>
+
+        <p>
+          The official uniform section will display the approved
+          school clothing, colours and requirements for each grade.
+        </p>
+
+        <ul class="uniform-list">
+          <li>Official daily school uniform</li>
+          <li>Sports and physical education uniform</li>
+          <li>Footwear requirements</li>
+          <li>Uniform purchasing information</li>
+          <li>Additional dress requirements</li>
+        </ul>
+
+        <p style="margin-top:18px;font-size:12px">
+          Official uniform specifications are to be provided by the school.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOL HOURS -->
+<section class="section hours-section" id="hours">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label" style="color:var(--gold)">Plan your day</div>
+      <h2 class="section-title">School hours & daily schedule.</h2>
+      <p class="section-description">
+        A simple overview of school operating times for parents and guardians.
+      </p>
+    </div>
+
+    <div class="hours-grid">
+
+      <div class="hour-card reveal">
+        <span>School days</span>
+        <h3>Monday – Friday</h3>
+      </div>
+
+      <div class="hour-card reveal">
+        <span>Opening time</span>
+        <h3>07:00 Hr</h3>
+        <p>School arrival and morning registration time.</p>
+      </div>
+
+      <div class="hour-card reveal">
+        <span>Closing time</span>
+        <h3>17:00 Hr</h3>
+        <p>School dismissal and collection arrangements.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Life at Ranchdale</div>
+      <h2 class="section-title">A glimpse into our school community.</h2>
+      <p class="section-description">
+        A gallery for classroom activities, school events,
+        facilities and memorable school moments.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item reveal">
+        <img src="about1.jpg"
+          alt="Learning environment">
+        <div class="gallery-caption">Learning together</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="about2.jpg"
+          alt="Early learning">
+        <div class="gallery-caption">Early learning</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="about3.jpg"
+          alt="Students in class">
+        <div class="gallery-caption">Academic development</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="about4.jpg"
+          alt="School activity">
+        <div class="gallery-caption">School activities</div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="hero.jpg"
+          alt="Students participating">
+        <div class="gallery-caption">Growing together</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="section admissions">
+  <div class="container">
+    <div class="admissions-box reveal">
+
+      <div class="section-label" style="color:var(--gold)">
+        Begin the journey
+      </div>
+
+      <h2>Give your child a place to grow.</h2>
+
+      <p>
+        Discover what Ranchdell School has to offer.
+        Contact our admissions team for information about enrolment,
+        requirements and availability.
+      </p>
+
+      <a href="https://wa.me/+260972235211" class="btn btn-gold">Enquire About Admissions ↗</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION & CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Get in touch</div>
+      <h2 class="section-title">We would love to hear from you.</h2>
+      <p class="section-description">
+        Have a question about admissions, school fees or our programmes?
+        Contact Ranchdale School.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-details">
+
+        <div class="contact-item reveal">
+          <div class="contact-icon">⌖</div>
+          <div>
+            <strong>School Location</strong>
+            <span>Near Obama</span>
+          </div>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-icon">☎</div>
+          <div>
+            <strong>Telephone</strong>
+            <span>0973374422</span>
+          </div>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-icon">✉</div>
+          <div>
+            <strong>Email Address</strong>
+            <span>ranchdale@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-icon">◷</div>
+          <div>
+            <strong>Office Hours</strong>
+            <span>07:00Hr - 17:00Hr</span>
+          </div>
+        </div>
+
+      </div>
+
+      
+<div class="map-container reveal">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.207250749184!2d28.373831499999998!3d-15.332284099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19406341b7ac5eef%3A0x6a23da4f2c15da48!2sRanchdale%20Academy!5e1!3m2!1sen!2szm!4v1795083022700!5m2!1sen!2szm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>Ranchdale School</h3>
+        <p>
+          Growing bright minds and building bright futures.
+          A place where every learner matters.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="#about">About the School</a>
+          <a href="#academics">Academic Programmes</a>
+          <a href="#fees">School Fees</a>
+          <a href="#uniform">School Uniform</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>For Parents</h4>
+        <div class="footer-links">
+          <a href="#hours">School Hours</a>
+          <a href="#fees">Fee Information</a>
+          <a href="#contact">Contact & Location</a>
+          <a href="#contact">Admissions Enquiries</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Ranchdale Academy. All rights reserved.</p>
+      <p>Growing Bright Futures.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- WHATSAPP PLACEHOLDER -->
+<a href="https://wa.me/+260972235211" class="whatsapp" aria-label="Contact Ranchdell">
+  💬
+</a>
+
+<script>
+// MOBILE NAVIGATION
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  const opened = navLinks.classList.toggle("active");
+
+  menuToggle.textContent = opened ? "✕" : "☰";
+  menuToggle.setAttribute("aria-expanded", opened);
+});
+
+// CLOSE MENU AFTER NAVIGATION
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+// SCROLL REVEAL ANIMATIONS
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  revealElements.forEach(element => observer.observe(element));
+} else {
+  revealElements.forEach(element => element.classList.add("visible"));
+}
+
+// AUTOMATIC COPYRIGHT YEAR
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// OPTIONAL: DISPLAY THE OFFICIAL UNIFORM PHOTO
+// Replace the empty src with the school's uniform image path.
+function setUniformImage(imagePath) {
+  const image = document.querySelector("#uniformImage img");
+  const placeholder = document.getElementById("uniformPlaceholder");
+  const container = document.getElementById("uniformImage");
+
+  image.onload = () => {
+    container.classList.add("has-image");
+    placeholder.style.display = "none";
+  };
+
+  image.onerror = () => {
+    container.classList.remove("has-image");
+    placeholder.style.display = "block";
+  };
+
+  image.src = imagePath;
+}
+
+// Example:
+// setUniformImage("assets/ranchdell-uniform.jpg");
+</script>
+
+</body>
+</html>
